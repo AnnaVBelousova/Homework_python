@@ -18,3 +18,10 @@ elif month in list_month[5:8]:
     season = "Лето"
 else: season = "Осень"
 print(season)
+
+
+month = int(input("Введите месяц :"))
+my_dict = { "Зима":[12,1,2],"Весна":[3,4,5], "Лето":[6,7,8],"Осень":[9,10,11]}
+for k,v in my_dict.items():
+    if month in v: 
+        print(k)
