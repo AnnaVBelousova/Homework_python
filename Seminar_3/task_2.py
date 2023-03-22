@@ -15,11 +15,15 @@
 # 1.0
 
 # Process finished with exit code 0
+try:
+    one_number = int(input("Введите число:"))
+    second_number = int(input("Введите число:"))
+    def divizion (a, b):
+        return a/b 
+    result = divizion(one_number, second_number)
+    print(result)
+except ZeroDivisionError:
+    print("Вы что? Пытаетесь делить на 0!")
 
-one_number = int(input("Введите число:"))
-second_number = int(input("Введите число:"))
 
-def divizion (a, b):
-    return a/b 
-result = divizion(one_number, second_number)
-print(result)
+
