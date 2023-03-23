@@ -3,31 +3,32 @@
 # Попробуйте решить задачу двумя способами:
 # 1) используя функцию sort()
 # 2) без функции sort()
-res = 0
-a  = int(input())
-b = int(input())
-c = int(input())
 def my_func (a, b ,c):
-    if a-b>0 and a -c > 0:
-        a = max
-        if b>c:
-             a + b == res
-        else: 
-             a + c== res
-    elif a - b < 0 and b-c >0:
-        b = max
-        if a>c:
-             a + b == res
-        else: 
-             b + c== res
-    else: 
-        c = max
-        if b>a:
-             c + b== res 
-        else: 
-            a + c== res
+    numbers = [a,b,c]
+    numbers.sort()
+    res = numbers[2]+numbers[1]
     return res
-result = my_func(int(input("введите число:")), int(input("введите число:")), int(input("введите число:")))
-print(result)
    
-    
+result = my_func(int (input("введите число:" )), int (input("введите число:" )), int (input("введите число:" )))
+print(result)  
+
+def my_func (a, b ,c):
+   
+    numbers = [a,b,c]
+   
+    maxvalue = max(numbers)
+    numbers.remove(maxvalue)
+    for i in range (2):
+        if numbers[0]<numbers[1]:
+            res = numbers[1]+maxvalue 
+        else: res = numbers[0]+maxvalue
+        
+    return res
+
+
+   
+result = my_func(int (input("введите число:" )), int (input("введите число:" )), int (input("введите число:" )))
+print(result)   
+
+
+
