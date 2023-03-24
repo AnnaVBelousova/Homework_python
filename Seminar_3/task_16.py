@@ -8,15 +8,17 @@
 #     1 2 3 4 5
 #     3
 #     -> 1
-N  = int(input("введите натуральное число:"))
+N  = int(input("введите число:"))
 list_1 = []
 for i in range(N):
-    n  = int(input())
-    list1 = list_1.append(n)
+    n  = int(input("введите число n = "))
+    list_1.append(n)
+print(list_1)
 
-x = int(input())
-for el in list1:
-    count = 0
+x = int(input("введите число х = "))
+count = 0
+for el in list_1:
+    
     if el == x:
         count = count+1 
 print(count)
