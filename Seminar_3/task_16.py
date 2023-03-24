@@ -24,11 +24,11 @@ def repetition_number(list_1):
         if el == x:
             count = count+1 
     return count
-
-N  = int(input("введите число:"))
-
-
-mylist = my_list(N)
-print(mylist)
-repetition = repetition_number(mylist)
-print(repetition)
+try:
+    N  = int(input("введите число:"))
+    mylist = my_list(N)
+    print(mylist)
+    repetition = repetition_number(mylist)
+    print(repetition)
+except ValueError:
+    print("это не число!")
