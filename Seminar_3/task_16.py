@@ -8,18 +8,28 @@
 #     1 2 3 4 5
 #     3
 #     -> 1
-N  = int(input("введите число:"))
-list_1 = []
-for i in range(N):
-    n  = int(input("введите число n = "))
-    list_1.append(n)
-print(list_1)
+def my_list(N):
+    list_1 = []
+    for i in range(N):
+        n  = int(input("введите число n = "))
+        list_1.append(n)
+    return list_1
 
-x = int(input("введите число х = "))
-count = 0
-for el in list_1:
+
+def element_number(list_1):
+    x = int(input("введите число х = "))
+    count = 0
+    for el in list_1:
     
-    if el == x:
-        count = count+1 
-print(count)
+        if el == x:
+            count = count+1 
+    return count
+
+N  = int(input("введите число:"))
+
+
+mylist = my_list(N)
+print(mylist)
+repetition_number = element_number(mylist)
+print(repetition_number)
     
