@@ -16,7 +16,7 @@ def my_list(N):
     return list_1
 
 
-def element_number(list_1):
+def repetition_number(list_1):
     x = int(input("введите число х = "))
     count = 0
     for el in list_1:
@@ -30,6 +30,5 @@ N  = int(input("введите число:"))
 
 mylist = my_list(N)
 print(mylist)
-repetition_number = element_number(mylist)
-print(repetition_number)
-    
+repetition = repetition_number(mylist)
+print(repetition)
