@@ -30,9 +30,11 @@ def the_most_closed_number(list_1):
             
     return list_1[index]
 
-N  = int(input("введите число:"))
-
-mylist = my_list(N)
-print(mylist)
-the_most_closed = the_most_closed_number(mylist)
-print(the_most_closed)
+try:
+    N  = int(input("введите число:"))
+    mylist = my_list(N)
+    print(mylist)
+    the_most_closed = the_most_closed_number(mylist)
+    print(the_most_closed)
+except ValueError:
+    print('это не число!')
