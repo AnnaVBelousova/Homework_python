@@ -2,15 +2,20 @@
 # и возвращает сумму наибольших двух аргументов.
 # Попробуйте решить задачу двумя способами:
 # 1) используя функцию sort()
-# 2) без функции sort()
+
 def my_func (a, b ,c):
     numbers = [a,b,c]
     numbers.sort()
     res = numbers[2]+numbers[1]
     return res
    
-result = my_func(int (input("введите число:" )), int (input("введите число:" )), int (input("введите число:" )))
-print(result)  
+try:
+    result = my_func(int (input("введите число:" )), int (input("введите число:" )), int (input("введите число:" )))
+    print(result)
+except ValueError:
+    print("это не число!") 
+
+# 2) без функции sort()
 
 def my_func (a, b ,c):
    
@@ -26,9 +31,11 @@ def my_func (a, b ,c):
     return res
 
 
-   
-result = my_func(int (input("введите число:" )), int (input("введите число:" )), int (input("введите число:" )))
-print(result)   
+try:  
+    result = my_func(int (input("введите число:" )), int (input("введите число:" )), int (input("введите число:" )))
+    print(result)
+except ValueError:
+    print("это не число!")   
 
 
 
