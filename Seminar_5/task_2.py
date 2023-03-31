@@ -46,9 +46,22 @@
 # print (*res)
 
 
-def count_numbers (N):
+def count_numbers (N, count_even, count_odd):
+    if N//10 == 0:
+        return count_even, count_odd
+    count_even = 0
+    count_odd = 0
+    else: N%10%2 == 0
+        count_even +=1
+    if N%10%2 == 1:
+        count_odd +=1
     
-    n = N%10
+        
+        
+    return count_numbers (N//10, count_even, count_odd) 
+
+N = int(input("Введите число:"))
+result = count_numbers(N,0,0)
     
    
     

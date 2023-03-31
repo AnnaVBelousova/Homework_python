@@ -14,14 +14,24 @@
 # Не забудьте проверить на числе, которое оканчивается на 0.
 # 1230 -> 0321
 
+lst = []
+
 def invert_number(N):
-    lst = []
-    A = N%10
-    B = N//10
-    lst.append(A)
-    if B==0:
-        return lst
-    return lst, invert_number(N//10)
+
+      last = N%10
+      lst.append(last)
+      invert_number_as_string = ''.join(map(str,lst))
+      invert_number_as_string.replace(' ','')
+      
+      if  N//10==0:
+          return invert_number_as_string
+      
+      return  invert_number(N//10)
+
+
 N = int(input("Введите число:"))
 res = invert_number(N)
 print(res)
+
+
+
