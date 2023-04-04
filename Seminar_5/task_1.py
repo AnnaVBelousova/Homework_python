@@ -22,36 +22,59 @@
 # Вы вместо трехзначного числа ввели строку (((. Исправьтесь
 # Введите операцию (+, -, *, / или 0 для выхода):
 
-# operator = input("Введите знак операции +, -, *, /, или 0 :")
-# n1 = int(input("Введите число:"))
-# n2 = int(input("Введите число:"))
+
  
 
 def operations_with_numbers():
-    if operator == '+':
-        answer = n1+n2
-        input("Введите знак операции +, -, *, /, или 0 :")
-    if operator == 0:
-        print ("стоп")
-    if operator == "-":
-        answer = n1-n2
-        input("Введите знак операции +, -, *, /, или 0 :")
-    if operator == 0:
-        print ("стоп")
-    if operator == "*":
-        answer = n1 * n2
-        input("Введите знак операции +, -, *, /, или 0 :")
-    if operator == 0:
-        print ("стоп")
-    if operator == "/":
-        answer = n1/n2
-        input("Введите знак операции +, -, *, /, или 0 :")
-    if operator == 0:
-        print ("стоп")
-        return answer
-   
-       
+
+    operator = input("Введите знак операции +, -, *, /, 0:")
+
+    if operator == "0":
+        print("Программа завершена")
+        return    
+    else:
+        if operator in '+ - * /': 
+            try:
+                n1 = int(input("Введите число:"))
+                n2 = int(input("Введите число:"))
+            except ValueError:
+                print("Это не число!")
+                operations_with_numbers()
+
+            if operator == '+':
+                answer = n1+n2
+                print(f'Ваш результат {answer}')
+                return operations_with_numbers()
+               
+            elif operator == "-":
+                answer = n1-n2
+                print(f'Ваш результат {answer}')
+                return operations_with_numbers()
+            
+            elif operator == "*":
+                answer = n1 * n2
+                print(f'Ваш результат {answer}')
+                return operations_with_numbers()
+            
+            elif operator == "/":
+
+                try:
+                    answer = n1 / n2
+                    print(f'Ваш результат {answer}')
+                    return operations_with_numbers()
+                                   
+                except ZeroDivisionError:
+                    print("На ноль делить нельзя!")
+        else: 
+            print("Неверный знак!")
+
     return operations_with_numbers()
 
-res = operations_with_numbers()
-print(res)
+operations_with_numbers()     
+ 
+
+
+
+
+ 
+

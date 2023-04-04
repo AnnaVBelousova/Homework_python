@@ -14,9 +14,9 @@
 # Не забудьте проверить на числе, которое оканчивается на 0.
 # 1230 -> 0321
 
-lst = []
 
-def invert_number(N):
+
+def invert_number(N, lst = []):
 
       last = N%10
       lst.append(last)
@@ -26,12 +26,15 @@ def invert_number(N):
       if  N//10==0:
           return invert_number_as_string
       
-      return  invert_number(N//10)
+      return  invert_number(N//10, lst)
 
-
-N = int(input("Введите число:"))
-res = invert_number(N)
-print(res)
+try:
+    N = int(input("Введите число:"))
+    res = invert_number(N, lst = [])
+    print(res)
+    
+except ValueError:
+    print("Это не число!")
 
 
 

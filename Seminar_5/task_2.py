@@ -15,53 +15,26 @@
 
 
 
-# def count_numbers (N):
-    
-#     last = N%10
-#     count1 = 0
-    
-  
-   
-
-#     if last % 2==0:
-#         count1+=1
-     
-    
-  
-#     if  N//10==0:
-#         return count1
-       
-#     return count1, count_numbers(N%10)
-
-# N = int(input("Введите число:"))
-# res = count_numbers(N)
-# print(res)
-
-# Number_as_string = str(N)
-# length_N =len(Number_as_string)
 
 
 
-
-# print (*res)
-
-
-def count_numbers (N, count_even, count_odd):
+def count_numbers (N, even=0, odd=0):
+    if N % 10 % 2 == 0:
+        even +=1
+    else: odd +=1
     if N//10 == 0:
-        return count_even, count_odd
-    count_even = 0
-    count_odd = 0
-    else: N%10%2 == 0
-        count_even +=1
-    if N%10%2 == 1:
-        count_odd +=1
-    
-        
-        
-    return count_numbers (N//10, count_even, count_odd) 
+        return even, odd
+    return count_numbers (N//10, even, odd) 
 
-N = int(input("Введите число:"))
-result = count_numbers(N,0,0)
+try:
+    N = int(input("Введите число:"))
+    result = count_numbers(N)
+    print(result)
+except ValueError:
+    print("Это не число!")
+   
+    
+    
     
    
     
@@ -71,35 +44,7 @@ result = count_numbers(N,0,0)
      
     
   
-    if  N//10==0:
-        return n
-       
-    return  count_numbers( N//10)
 
-N = int(input("Введите число:"))
-res = count_numbers(N)
-print(res)
-
-Number_as_string = str(N)
-length_N =len(Number_as_string)
-
-
-
-
-
-
-
-
-
-        
-#     if index == length_N:
-        
-#         return lst
-       
-#     return res, index+1
-
-# result = counting_even_odd(res)
-# print(result)
 
 
 
